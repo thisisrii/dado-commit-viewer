@@ -1,0 +1,22 @@
+@import '../../styles/colours';
+@import '../../styles/mixins';
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    width: 193px;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include respond(mobile) {
+        width: 161px;
+        margin-top: 16px;
+    }
+
+    > a {
+        color: $dark-color;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.4px;
+    }
+}

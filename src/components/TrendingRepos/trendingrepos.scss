@@ -1,0 +1,47 @@
+@import '../../styles/colours';
+@import '../../styles/mixins';
+
+.trending-container {
+    display: flex;
+    flex-direction: row;
+    width: 1060px;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    @include respond(mobile){
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+    @include respond(tablet) {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+}
+
+.trending-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 16px;
+    background-color: $primary-color;
+    border-radius: 8px;
+    color: $white-color;
+    border: none;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    line-height: 19px;
+    cursor: pointer;
+
+    @include respond(mobile) {
+        margin-bottom: 16px;
+    }
+
+    @include respond(tablet) {
+        margin-bottom: 16px;
+    }
+}

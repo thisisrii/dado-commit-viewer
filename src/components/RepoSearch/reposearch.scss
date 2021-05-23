@@ -1,0 +1,101 @@
+@import '../../styles/colours';
+@import '../../styles/mixins';
+
+.search-input-container {
+    display: flex;
+    width: 694px;
+    height: 58px; 
+
+    @include respond(mobile) {
+        width: 91%;
+        margin-bottom: 24px;
+    }
+
+    @include respond(tablet){
+        width: 80%;
+        margin-right: 16px;
+    }
+}
+
+.search-icon {
+    background: none;
+    color: $dark-color;
+    min-width: 50px;
+    text-align: center;
+    position: absolute;
+    padding-left: 10px;
+    display: flex;
+    align-self: center;
+  }
+
+.search-input {
+    border: none;
+    background-color: $neutral-color;
+    color: $placeholder-primary-color;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 28px;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    padding-left: 50px;
+}
+
+.search-button {
+    position: relative;
+    border: none;
+    background-color: $secondary-color;
+    color: $white-color;
+    border-radius: 8px;
+    outline: none;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    width: 210px;
+    height: 58px;
+    cursor: pointer;
+
+    /* identical to box height, or 140% */
+    text-align: center;
+    letter-spacing: -0.5px;
+
+    @include respond(mobile){
+        width: 91%;
+    }
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 64px;
+}
+
+.home-search-form {
+    display: flex;
+    width: 920px;
+    justify-content: space-between;
+
+    @include respond(mobile) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include respond(tablet) {
+        width: 80%;
+    }
+}
+
+.explorer-search-form {
+    display: flex;
+    width: 920px;
+    justify-content: space-between;
+
+    @include respond(mobile) {
+        display: none;
+    }
+
+    @include respond(tablet) {
+        width: 80%;
+    }
+}
